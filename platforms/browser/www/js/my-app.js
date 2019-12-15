@@ -193,18 +193,20 @@ var RegistrationCallback = function (JsonObject) {
     }
 }
 
+//On geoLocation success
 function geoCallback(position) {
     currentLocation = {
         lat: position.coords.latitude,
         lng: position.coords.longitude
     }
 }
-
+//On groLocation failure
 function onError(message) {
     
     console.log("error Message:" + message);
 }
 
+//Funvtion used to locate roomates
 function FindRoommates() {
     map = new google.maps.Map(document.getElementById('map'),
         {
@@ -212,7 +214,7 @@ function FindRoommates() {
             center: currentLocation
         }
     );
-
+    
     addMarkerToMap(currentLocation.lat,currentLocation.lng,"red");
     FindRoommatesRequest(distanceSilder.value, currentLocation.lat, currentLocation.lng);
 }
@@ -249,6 +251,7 @@ function FindRoommatesRequest(range, currentlatitude, currentlongitude) {
 
 }
 
+//Each roommate which is not filtered is added as a table to the html
 function PopulateHtmlWithRoommates(Roommates) {
     var filteredRoommates = FilterRoommates(Roommates);
     document.getElementById("roommates").innerHTML="";
@@ -298,6 +301,7 @@ function FilterRoommates(Roommates) {
     var filteredRoommates = [];
 
     for (var i = 0; i < Roommates.length; i++) {
+        //filters roommates by age, username and smoker
         if ((Roommates[i].username != User.username) && (Roommates[i].smoker == User.smoker) && ((Roommates[i].age + 10) >= User.age) && ((Roommates[i].age - 10) <= User.age)) {
             filteredRoommates.push(Roommates[i]);
         }
@@ -306,7 +310,7 @@ function FilterRoommates(Roommates) {
     return filteredRoommates;
 }
 
-
+//Adds a new marker to the google map with a given color
 function addMarkerToMap(lat, long, color) {
     var position = { lat: lat, lng: long };
     var marker = new google.maps.Marker({
@@ -320,7 +324,7 @@ function ShowErrorMessage(message) {
     document.getElementById("ErrorPopUp").style.visibility = "visible";
     document.getElementById("ErrorPopUpMessage").innerHTML = message;
 }
-
+//controls error message display 
 function ClearErrorDisplay() {
     document.getElementById("ErrorPopUp").style.visibility = "hidden";
     document.getElementById("ErrorPopUpMessage").innerHTML = "";
