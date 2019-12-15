@@ -22,24 +22,111 @@
 }
 
 .mainColour{
-    background-color:  #190ebb;
+    background-color:  #424642;
 }
 
 .boundryColour{
-    background-color: rgb(12, 189, 21);
+    background-color: rgb(98, 100, 98);
 }
 
 
 .text-Colour{
-    color: 	rgb(12, 189, 21);
+    color: 	rgb(0, 0, 0);
+}
+
+#roommates{
+    display: block;
+    overflow: hidden;
+    padding-right: 5px;
+    padding-left: 10px;
+    width: 100%;
 }
 
 div#roommates>div.Roommate{
-    border: 10mm;
+    color: 	rgb(0, 0, 0);
+    border: rgb(0, 0, 0);
+    border-style: solid;
     border-block: "true";
+    background-color: grey;
+    margin: 5px;
+    display: block;
+    width: 100%;
 }
 
+
 h1.title{
-    color: 	rgb(12, 189, 21);
-    background-color: rgb(9, 31, 104);
+    color: 	rgb(36, 0, 194);
+    margin:0 auto;
+    float:right;
 }
+
+.closeButton{
+    width: 5pc;
+    border: black;
+    border-style: solid;
+    color: black;
+    float: right;
+    margin: 1pc;
+}
+
+#ErrorPopUpMessage{
+    padding: 0.2pc;
+}
+
+#ErrorPopUp{
+    background-color: red;
+    color: black;
+    border: white;
+    border-style: solid;
+    text-align: center;
+    position: relative;
+    border:2px solid blue;
+    width:90%;
+    top: 50px;
+    box-sizing: border-box;
+    margin:0 auto;
+    visibility: hidden;
+}
+
+
+
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+  }
+  
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 20px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+  

@@ -4,28 +4,38 @@
 <div class="navbar">
     <div class="navbar-inner">
         <div class="left">
-            <a href="#" class="back link">
-                <i class="icon icon-back"></i>
-                <span>Back</span>
-            </a>
+            <button onclick="BackToIndex()">LogOut</button>
         </div>
-        <div class="center sliding">RoommateList</div>
-        <div class="right">
-            <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+        <div class="center">
+            <h1 class="text-Colour">Roommate</h1>
         </div>
+        
     </div>
 </div>
 <div class="pages">
     <div data-page="RoommateList" class="page">
-        <div class="page-content">
+        <div class="page-content mainColour">
             <div class="content-block">
-                <div id="roommateSection">
-                    <div id="roommates">
-                        
+                <div class="container mainColour">
+                    <div class="row">
+                        <div id="silderValue"></div>
+                        <div class="slidecontainer">
+                            <input type="range" min="1" max="100" value="50" class="slider" id="distanceSilder">
+                        </div>
+                        <button onclick="FindRoommates()">New Search</button>
                     </div>
-                    <div id="map"></div>
+
+                    <div class="row col-12">
+
+                        <div id="roommates"></div>
+                    </div>
+
+
+                    <div class="row">
+                        <div id="map"></div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
-</div>

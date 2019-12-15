@@ -41,15 +41,6 @@
     <!-- Status bar overlay for full screen mode (PhoneGap) -->
     <div class="statusbar-overlay"></div>
 
-    <!-- Panels overlay-->
-    <div class="panel-overlay"></div>
-    <!-- Left panel with reveal effect-->
-    <div class="panel panel-left panel-reveal">
-        <div class="content-block">
-            <p>Left panel content goes here</p>
-        </div>
-    </div>
-
     <!-- Views -->
     <div class="views">
         <!-- Your main view, should have "view-main" class -->
@@ -58,25 +49,35 @@
             <div class="navbar boundryColour">
                 <div class="navbar-inner">
                     <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <div class="text-center center">
+                        <h1 class="title">Roomator</h1>
+                    </div>
+                </div>
 
+                <div id="ErrorPopUp">
 
+                    <p id="ErrorPopUpMessage"></p>
+                    <div class="closeButton" onclick="ClearErrorDisplay()">Close X</div>
                 </div>
             </div>
+
+
+
+
             <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
             <div class="pages navbar-through toolbar-through mainColour">
+
                 <!-- Page, "data-page" contains page name -->
                 <div data-page="index" class="page mainColour">
                     <!-- Scrollable page content -->
                     <div class="page-content mainColour">
+
+
                         <div class="content-block">
                             <div class="container mainColour">
                                 <div id="mainMenuSection">
+
                                     <div class="row">
-                                        <div class="text-center col-12">
-                                            <h1 class="title">Roomator</h1>
-                                        </div>
-                                    </div>
-                                    <div class="row ">
 
                                         <div class="col-6">
                                             <a href="registration.html"><button type="button"

@@ -4,12 +4,13 @@
 <div class="navbar">
     <div class="navbar-inner">
         <div class="left">
-            <a href="#" class="back link">
+            <div onclick="BackToIndex()" class="back link">
                 <i class="icon icon-back"></i>
-                <span>Back</span>
-            </a>
+            </div>
         </div>
-        <div class="center"><h1 class="text-Colour">Registration</h1></div>
+        <div class="center">
+            <h1 class="text-Colour">Registration</h1>
+        </div>
     </div>
 </div>
 <div class="pages">
@@ -18,9 +19,10 @@
             <div class="content-block ">
 
                 <div class="container p-5 my-5 mainColour">
-                    <div id="RegistrationSection ">
-                        <div class="row">
 
+
+                    <div class="row">
+                        <div id="RegistrationSection ">
                             <div class="col-12">
                                 <label for="regUsername" class="text-Colour">Username:</label>
                                 <input class="form-control" type="text" id="regUsername" name="regUsername" />
@@ -59,7 +61,8 @@
                             </div>
 
                             <div class=" col-12">
-                                <button type="button float-right" class="text-Colour" onclick="Register()">Register</button>
+                                <button type="button float-right" class="text-Colour"
+                                    onclick="Register()">Register</button>
                             </div>
                         </div>
                     </div>
